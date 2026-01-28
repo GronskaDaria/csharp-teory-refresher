@@ -8,14 +8,9 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.WriteLine("Enter your name: ");
-            string name = Console.ReadLine();
-
-            //while (string.IsNullOrWhiteSpace(name))
-            while (name == "")
+           for (int i = 1; i <= 5; i++)
             {
-                Console.WriteLine("Name cannot be empty. Please enter your name: ");
-                name = Console.ReadLine();
+                Console.WriteLine(i);
             }
             Console.ReadKey();
         }
