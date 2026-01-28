@@ -8,21 +8,90 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            int magicNumber = new Random().Next(1, 31);
-            Console.WriteLine("Welcome to the Magic Number Guessing Game!");
-            Console.WriteLine("Try to guess the magic number between 1 and 30.\n");
+            string playerGuess = "";
+            string computerGuess = "";
+            bool playAgain = true;
+            string userInput = "";
 
-            int userGuess = 0;
-            while (userGuess!=magicNumber)
+            string [] choices = { "rock", "paper", "scissors" };
+            Random rand = new Random();
+
+            while (playAgain)
             {
-                Console.Write("Enter your namber: ");
-                userGuess = int.Parse(Console.ReadLine());
+                computerGuess=choices [rand.Next(0, choices.Length)];
+                while (playerGuess!="r"&&playerGuess!="p"&&playerGuess!="s")
+                {
+                    Console.Write("Enter your choice (rock - r , paper - p, scissors - s): ");
+                    playerGuess=Console.ReadLine().ToLower();
+                }
 
-                Console.WriteLine(userGuess < magicNumber ? "Too low! Try again." : userGuess > magicNumber ? "Too high! Try again." : "Congratulations! You've guessed the magic number!");
+                Console.WriteLine($"Computer chose: {computerGuess}");
+                if (playerGuess=="r")
+                {
+                    switch (computerGuess)
+                    {
+                        case "rock":
+                            Console.WriteLine("It's a tie!");
+                            break;
+                        case "paper":
+                            Console.WriteLine("Computer wins!");
+                            break;
+                        case "scissors":
+                            Console.WriteLine("You win!");
+                            break;
+                    }
+                }
+                else if (playerGuess=="p")
+                {
+                    switch (computerGuess)
+                    {
+                        case "rock":
+                            Console.WriteLine("You win!");
+                            break;
+                        case "paper":
+                            Console.WriteLine("It's a tie!");
+                            break;
+                        case "scissors":
+                            Console.WriteLine("Computer wins!");
+                            break;
+                    }
+                }
+                else if (playerGuess=="s")
+                {
+                    switch (computerGuess)
+                    {
+                        case "rock":
+                            Console.WriteLine("Computer wins!");
+                            break;
+                        case "paper":
+                            Console.WriteLine("You win!");
+                            break;
+                        case "scissors":
+                            Console.WriteLine("It's a tie!");
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input.");
+                }
+
+                while (userInput!="y"&&userInput!="n")
+                {
+                    Console.Write("Would your like to play again? Y/N ");
+                    userInput=Console.ReadLine().ToLower();
+                }
+
+                playAgain=(userInput=="y" ? true : false);
+                userInput="";
+                playerGuess="";
+
             }
+
+            Console.WriteLine("Thnx for game!!");
+
 
             Console.ReadKey();
         }
     }
 }
-
