@@ -8,18 +8,16 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.WriteLine("What's the temperature outside: (C)");
-            double celsius = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter your name: ");
+            string name = Console.ReadLine();
 
-            if (celsius>=10 && celsius<25)
+            //while (string.IsNullOrWhiteSpace(name))
+            while (name == "")
             {
-                Console.WriteLine("It's warm outside!");
+                Console.WriteLine("Name cannot be empty. Please enter your name: ");
+                name = Console.ReadLine();
             }
-            else if(celsius<-50 || celsius>50)
-            {
-                Console.WriteLine("DON'T GO OUTSIDE!!!!");
-            }
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
