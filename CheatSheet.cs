@@ -1,4 +1,4 @@
-﻿// Escape Sequences: 
+﻿//// ESCAPE SEQUENCES:
 // This C# code snippet demonstrates various language features and constructs.
 // \a - Alert (bell) character
 // \b - Backspace
@@ -11,7 +11,7 @@
 // \" - Double quote
 // \\ - Backslash
 
-//Variables and Data Types
+////VARIABLE DECLARATION AND DATA TYPES
 // Declaring an integer variable, stored numbers in 4 bytes
 //int integerVar = 42;
 
@@ -37,3 +37,24 @@
 //const double Pi = 3.14159;
 
 
+////TYPE CASTING
+// Implicit casting (automatically done by the compiler)
+//int intVar = 10;
+//double doubleVar = intVar; // int to double
+
+// Explicit casting (manually done by the programmer)
+//double doubleVar = 9.78;
+//int intVar = (int)doubleVar; // double to int
+
+// Using Convert class for type conversion
+//string strNum = "123";
+//int intNum = Convert.ToInt32(strNum);
+
+// Using Parse method for type conversion
+//string strNum = "456";
+//int intNum = int.Parse(strNum);
+
+// Using TryParse method for safe type conversion
+//string strNum = "789";
+//int intNum;
+//bool success = int.TryParse(strNum, out intNum);

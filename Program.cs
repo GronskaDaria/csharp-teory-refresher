@@ -8,22 +8,30 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            int x; // Variable declaration
-            x = 10; // Variable initialization
-            int y = 20; // Combined declaration and initialization 
+            double a = 5.35;
+            int b = Convert.ToInt32(a);
 
+            int c = 12;
+            double d= Convert.ToDouble(c);
 
-            int age = 25;
-            double height = 1.9;
-            string name = "John Doe";
-            bool isStudent = true;
-            char grade = 'A';
+            int e = 100;
+            string f = Convert.ToString(e);
 
-            Console.WriteLine("My name is "+name);
-            Console.WriteLine("My age is "+age +" cm");
-            Console.WriteLine("My height "+height);
-            Console.WriteLine("Am I student? "+ isStudent);
-            Console.WriteLine("My test grade is "+ grade);
+            string g = "256";
+            int h = Convert.ToInt32(g);
+
+            string i = "#";
+            char j = Convert.ToChar(i);
+
+            string k = "true";
+            bool l = Convert.ToBoolean(k);
+
+            // Implicit casting (automatically done by the compiler)
+            int intVar = 10;
+            double doubleVar = intVar+0.1;
+
+            Console.WriteLine(doubleVar);
+            Console.WriteLine(doubleVar.GetType());
             Console.ReadKey();
         }
     }
