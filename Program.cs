@@ -8,31 +8,25 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            int friendsCount = 5;
+            double x = 13;
 
-            // Different ways to increment the value of friendsCount by 1
-            friendsCount=friendsCount+1;
-            friendsCount+=1;
-            friendsCount++;
 
-            // Different ways to decrement the value of friendsCount by 1
-            friendsCount=friendsCount-1;
-            friendsCount-=1;
-            friendsCount--;
+            double y = Math.Max(x,12);
+            double z = Math.Pow(x,2);
+            double w = Math.Sqrt(x);
+            double v = Math.Abs(-24);
+            double u = Math.Round(3.45);
+            double t = Math.Ceiling(4.14);
+            double s = Math.Floor(6.99);
 
-            // Different ways to double the value of friendsCount
-            friendsCount=friendsCount*2;
-            friendsCount*=2;
+            Console.WriteLine(y);
+            Console.WriteLine(w);
+            Console.WriteLine(z);
+            Console.WriteLine(v);
+            Console.WriteLine(u);
+            Console.WriteLine(t);
+            Console.WriteLine(s);
 
-            // Different ways to halve the value of friendsCount
-            friendsCount=friendsCount/2;
-            friendsCount /= 2;
-
-            // Different ways to get the remainder when friendsCount is divided by 3
-            friendsCount= friendsCount % 4;
-            friendsCount %= 3;
-
-            Console.WriteLine(friendsCount);
             Console.ReadKey();
         }
     }
