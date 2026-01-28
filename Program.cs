@@ -8,21 +8,38 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.WriteLine("Enter your age:");
-            int age = Convert.ToInt32(Console.ReadLine());
-            if (age >= 18)
-            {
-                Console.WriteLine("You are eligible to vote.");
-            }
-            //else if
-            else
-            {
-                Console.WriteLine("You are not eligible to vote.");
-            }
-            //// Using ternary operator
-            //Console.WriteLine(age >= 18 ? "You are eligible to vote." : "You are not eligible to vote.");
+            Console.WriteLine("What day is it today?");
+            string day = Console.ReadLine();
 
+            switch (day.ToLower())
+            {
+                case "monday":
+                    Console.WriteLine("Today is Monday.");
+                    break;
+                case "tuesday":
+                    Console.WriteLine("Today is Tuesday.");
+                    break;
+                case "wednesday":
+                    Console.WriteLine("Today is Wednesday.");
+                    break;
+                case "thursday":
+                    Console.WriteLine("Today is Thursday.");
+                    break;
+                case "friday":
+                    Console.WriteLine("Today is Friday.");
+                    break;
+                case "saturday":
+                    Console.WriteLine("Today is Saturday.");
+                    break;
+                case "sunday":
+                    Console.WriteLine("Today is Sunday.");
+                    break;
+                default:
+                    Console.WriteLine("Invalid day entered.");
+                    break;
+            }
             Console.ReadKey();
         }
     }
 }
+
