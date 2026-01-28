@@ -8,20 +8,21 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.Write("Write name: ");
-            string name = Console.ReadLine();
-            SingHappyBirthday(name);
-            SingHappyBirthday(name);
-            SingHappyBirthday(name);
+            //Overloading
+            Console.WriteLine(Multiply(2.3, 45.1));
+            Console.WriteLine(Multiply(2.3, 45.1, 1.5));
+
             Console.ReadKey();
         }
 
-        static void SingHappyBirthday(string name)
+        static double Multiply(double a, double b)
         {
-            Console.WriteLine("Happy Birthday to you!");
-            Console.WriteLine("Happy Birthday to you!");
-            Console.WriteLine($"Happy Birthday dear {name}!");
-            Console.WriteLine("Happy Birthday to you!\n");
+            return a * b;
+        }
+
+        static double Multiply(double a, double b, double c)
+        {
+            return a * b * c;
         }
     }
 }

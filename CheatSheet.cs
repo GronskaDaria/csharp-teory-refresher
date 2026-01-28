@@ -159,6 +159,16 @@
 // Calling the Add method
 //int sum = Add(5, 3); // sum = 8
 
+////CLASSES AND OBJECTS
+// class is a blueprint for creating objects
+// object is an instance of a class
+
+
+////OVERLOADING AND OVERRIDING
+// Method Overloading: same method name with different parameters
+// Method Overriding: derived class provides specific implementation of a method in base class
+
+
 
 
 
