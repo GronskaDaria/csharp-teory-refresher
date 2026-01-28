@@ -136,5 +136,20 @@
 //bool result = !(5 > 3); // result = false
 
 
+////ARRAYS is a collection of items stored at contiguous memory locations
+// Declaring and initializing an array of integers
+//int[] numbers = new int[5] { 1, 2, 3, 4, 5 };
+//
+// Accessing array elements
+//int firstNumber = numbers[0]; // firstNumber = 1
+//int secondNumber = numbers[1]; // secondNumber = 2
+//
+// Modifying array elements
+//numbers[2] = 10; // numbers = { 1, 2, 10, 4, 5 }
+//
+// Getting the length of the array
+//int length = numbers.Length; // length = 5
+
+
 
 
