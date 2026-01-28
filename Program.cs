@@ -8,23 +8,20 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            string fullName = "Joe Doe";
-            string phoneNumber = "123-456-7890";
+            Console.WriteLine("Enter your age:");
+            int age = Convert.ToInt32(Console.ReadLine());
+            if (age >= 18)
+            {
+                Console.WriteLine("You are eligible to vote.");
+            }
+            //else if
+            else
+            {
+                Console.WriteLine("You are not eligible to vote.");
+            }
+            //// Using ternary operator
+            //Console.WriteLine(age >= 18 ? "You are eligible to vote." : "You are not eligible to vote.");
 
-            string name = fullName.Substring(0, 3);
-            string surname = fullName.Substring(4, 3);
-
-            fullName=fullName.ToLower();
-            fullName=fullName.ToUpper();
-
-            phoneNumber=phoneNumber.Replace("-", "/");
-            fullName=fullName.Insert(0, "Mr.");
-            
-
-            Console.WriteLine(name);
-            Console.WriteLine(surname);
-            Console.WriteLine(fullName);
-            Console.WriteLine(phoneNumber);
             Console.ReadKey();
         }
     }

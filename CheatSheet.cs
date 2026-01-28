@@ -83,3 +83,53 @@
 // Decrement
 //int count = 5;
 //count--; // count = 4
+
+////CONTROL FLOW STATEMENTS
+// If statement is used to execute a block of code if a specified condition is true.
+// If-else statement
+//if (number > 0)
+//{
+//    Console.WriteLine("The number is positive.");
+//}
+//else
+//{
+//    Console.WriteLine("The number is not positive.");
+//}
+
+// Switch statement is used to select one of many code blocks to be executed.
+//switch (day)
+//{
+//    case 1:
+//        Console.WriteLine("Monday");
+//        break;
+//    case 2:
+//        Console.WriteLine("Tuesday");
+//        break;
+//    default:
+//        Console.WriteLine("Other day");
+//        break;
+//}
+
+// For loop is used to execute a block of code a specified number of times.
+//for (int i = 0; i < 5; i++)
+//{
+//    Console.WriteLine("Iteration: " + i);
+//}
+
+// While loop is used to execute a block of code as long as a specified condition is true.
+//int i = 0;
+//while (i < 5)
+
+//{
+//    Console.WriteLine("Iteration: " + i);
+//    i++;
+//}
+
+// Do-while loop is similar to while loop, but it executes the block of code at least once.
+//int i = 0;
+//do
+//{
+//    Console.WriteLine("Iteration: " + i);
+//    i++;
+//} while (i < 5);
+
