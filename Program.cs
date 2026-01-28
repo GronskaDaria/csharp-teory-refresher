@@ -8,25 +8,12 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            double x = 13;
+            // Create an instance of the Random class. Pseudo-random number generator
+            Random random = new Random();
+            int randomNumber = random.Next(1, 101); // Generates a random number between 1 and 100
+            double randomDouble = random.NextDouble(); // Generates a random double between 0.0 and 1.0
 
-
-            double y = Math.Max(x,12);
-            double z = Math.Pow(x,2);
-            double w = Math.Sqrt(x);
-            double v = Math.Abs(-24);
-            double u = Math.Round(3.45);
-            double t = Math.Ceiling(4.14);
-            double s = Math.Floor(6.99);
-
-            Console.WriteLine(y);
-            Console.WriteLine(w);
-            Console.WriteLine(z);
-            Console.WriteLine(v);
-            Console.WriteLine(u);
-            Console.WriteLine(t);
-            Console.WriteLine(s);
-
+            Console.WriteLine("Random number between 1 and 100: " + randomNumber);
             Console.ReadKey();
         }
     }
