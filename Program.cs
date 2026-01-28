@@ -8,26 +8,20 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            //Array has fixed size
-
-            //string [] cars = { "Volvo", "BMW", "Ford", "Mazda" };
-            string[] cars = new string[4];
-
-            for (int i = 0; i < cars.Length; i++)
-            {
-                Console.Write("Enter car name: ");
-                cars[i] = Console.ReadLine();
-            }
-
-            cars[0] = "Opel";
-
-            foreach (string car in cars)
-            {
-                Console.WriteLine(car);
-            }
-
-            Console.WriteLine("\n"+cars);
+            Console.Write("Write name: ");
+            string name = Console.ReadLine();
+            SingHappyBirthday(name);
+            SingHappyBirthday(name);
+            SingHappyBirthday(name);
             Console.ReadKey();
+        }
+
+        static void SingHappyBirthday(string name)
+        {
+            Console.WriteLine("Happy Birthday to you!");
+            Console.WriteLine("Happy Birthday to you!");
+            Console.WriteLine($"Happy Birthday dear {name}!");
+            Console.WriteLine("Happy Birthday to you!\n");
         }
     }
 }

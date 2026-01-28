@@ -151,5 +151,14 @@
 //int length = numbers.Length; // length = 5
 
 
+////METHODS is a block of code that performs a specific task. Reusable code
+// Defining a method that adds two integers and returns the result  
+//int Add(int a, int b)
+//{   return a + b; }
+//
+// Calling the Add method
+//int sum = Add(5, 3); // sum = 8
+
+
 
 
