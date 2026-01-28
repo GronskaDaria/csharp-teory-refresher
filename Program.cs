@@ -8,13 +8,23 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.WriteLine("Enter side A:");
-            double sideA = Convert.ToDouble(Console.ReadLine());
+            string fullName = "Joe Doe";
+            string phoneNumber = "123-456-7890";
 
-            Console.WriteLine("Enter side B:");
-            double sideB = Convert.ToDouble(Console.ReadLine());
+            string name = fullName.Substring(0, 3);
+            string surname = fullName.Substring(4, 3);
 
-            Console.WriteLine("Side C is "+Hypotenuse.CalculateHypotenuse(sideA, sideB));
+            fullName=fullName.ToLower();
+            fullName=fullName.ToUpper();
+
+            phoneNumber=phoneNumber.Replace("-", "/");
+            fullName=fullName.Insert(0, "Mr.");
+            
+
+            Console.WriteLine(name);
+            Console.WriteLine(surname);
+            Console.WriteLine(fullName);
+            Console.WriteLine(phoneNumber);
             Console.ReadKey();
         }
     }
