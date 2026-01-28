@@ -8,87 +8,70 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            string playerGuess = "";
-            string computerGuess = "";
-            bool playAgain = true;
-            string userInput = "";
+            int num1, num2, result;
+            bool choseAgain = true;
+            bool validResponse = true;
+            char option;
+            char againOption = ' ';
 
-            string [] choices = { "rock", "paper", "scissors" };
-            Random rand = new Random();
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Calculator program");
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("Options:");
+            Console.WriteLine("\t + : Addition");
+            Console.WriteLine("\t - : Subtraction");
+            Console.WriteLine("\t * : Multiplication");
+            Console.WriteLine("\t / : Division\n");
 
-            while (playAgain)
+            Console.Write("Enter first number: ");
+            num1=Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            num2=Convert.ToInt32(Console.ReadLine());
+
+            while (choseAgain)
             {
-                computerGuess=choices [rand.Next(0, choices.Length)];
-                while (playerGuess!="r"&&playerGuess!="p"&&playerGuess!="s")
+                Console.Write ("\nEnter option: ");
+                option=Convert.ToChar(Console.ReadLine());
+                switch (option)
                 {
-                    Console.Write("Enter your choice (rock - r , paper - p, scissors - s): ");
-                    playerGuess=Console.ReadLine().ToLower();
+                    case '+':
+                        result=num1+num2;
+                        Console.WriteLine("Addition is: "+result);
+                        break;
+                    case '-':
+                        result=num1-num2;
+                        Console.WriteLine("Subtraction is: "+result);
+                        break;
+                    case '*':
+                        result=num1*num2;
+                        Console.WriteLine("Multiplication is: "+result);
+                        break;
+                    case '/':
+                        if (num2!=0)
+                        {
+                            result=num1/num2;
+                            Console.WriteLine("Division is: "+result);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Division by zero is not allowed.");
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid option selected.");
+                        break;
                 }
 
-                Console.WriteLine($"Computer chose: {computerGuess}");
-                if (playerGuess=="r")
+                while (validResponse)
                 {
-                    switch (computerGuess)
-                    {
-                        case "rock":
-                            Console.WriteLine("It's a tie!");
-                            break;
-                        case "paper":
-                            Console.WriteLine("Computer wins!");
-                            break;
-                        case "scissors":
-                            Console.WriteLine("You win!");
-                            break;
-                    }
+                    Console.Write("Do you want to perform another operation? (y/n): ");
+                     againOption = Convert.ToChar(Console.ReadLine());
+                    validResponse= againOption=='y' || againOption=='n' ? false : true;
                 }
-                else if (playerGuess=="p")
-                {
-                    switch (computerGuess)
-                    {
-                        case "rock":
-                            Console.WriteLine("You win!");
-                            break;
-                        case "paper":
-                            Console.WriteLine("It's a tie!");
-                            break;
-                        case "scissors":
-                            Console.WriteLine("Computer wins!");
-                            break;
-                    }
-                }
-                else if (playerGuess=="s")
-                {
-                    switch (computerGuess)
-                    {
-                        case "rock":
-                            Console.WriteLine("Computer wins!");
-                            break;
-                        case "paper":
-                            Console.WriteLine("You win!");
-                            break;
-                        case "scissors":
-                            Console.WriteLine("It's a tie!");
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input.");
-                }
-
-                while (userInput!="y"&&userInput!="n")
-                {
-                    Console.Write("Would your like to play again? Y/N ");
-                    userInput=Console.ReadLine().ToLower();
-                }
-
-                playAgain=(userInput=="y" ? true : false);
-                userInput="";
-                playerGuess="";
-
+                choseAgain=againOption=='y' ? true : false;
+                againOption=' ';
+                validResponse=true;
             }
-
-            Console.WriteLine("Thnx for game!!");
 
 
             Console.ReadKey();
