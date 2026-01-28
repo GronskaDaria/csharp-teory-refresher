@@ -8,9 +8,23 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-           for (int i = 1; i <= 5; i++)
+            //Nested Loops = Loops inside of loops. 
+            Console.Write("How many rows?: ");
+            int rows = int.Parse(Console.ReadLine());
+
+            Console.Write("How many columns?: ");
+            int cols = int.Parse(Console.ReadLine());
+
+            Console.Write("What symbol: ");
+            string symbol = Console.ReadLine();
+
+            for (int i = 1; i <= rows; i++)
             {
-                Console.WriteLine(i);
+                for (int j = 1; j <= cols; j++)
+                {
+                    Console.Write(" "+symbol);
+                }
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
