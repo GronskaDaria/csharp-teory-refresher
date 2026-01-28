@@ -8,25 +8,35 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            //params keyword allows passing a variable number of arguments to a method
-            //The method can accept zero or more arguments of a specified type
-
-            Console.WriteLine("Total price: "+ CheckOut(1,4,5,7,23));
-
+            int x;
+            int y;
+            double result;
+            try
+            {
+                Console.WriteLine("Enter first number: ");
+                x=Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter second number: ");
+                y=Convert.ToInt32(Console.ReadLine());
+                result=x/y;
+                Console.WriteLine("Result is "+result);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Enter ONLY numbers.");
+                return;
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero.");
+                return;
+            }
+            finally
+            {
+                Console.WriteLine("Execution completed.");
+            }
 
             Console.ReadKey();
         }
-
-        static double CheckOut(params double [] prices)
-        {
-            double total = 0;
-            foreach (double price in prices)
-            {
-                total += price;
-            }
-            return total;
-        }
-
 
     }
 }

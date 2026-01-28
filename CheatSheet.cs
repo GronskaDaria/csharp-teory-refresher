@@ -168,6 +168,12 @@
 // Method Overloading: same method name with different parameters
 // Method Overriding: derived class provides specific implementation of a method in base class
 
+////EXCEPTION HANDLING
+// try-catch block to handle exceptions
+//try is used to enclose code that may throw an exception
+//catch is used to handle the exception
+//finaly is used to execute code regardless of whether an exception occurred or not
+
 
 
 
