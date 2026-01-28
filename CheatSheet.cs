@@ -58,3 +58,28 @@
 //string strNum = "789";
 //int intNum;
 //bool success = int.TryParse(strNum, out intNum);
+
+
+////ARYSMETIC OPERATORS
+// Addition
+//int sum = 5 + 3; // sum = 8
+
+// Subtraction
+//int difference = 5 - 3; // difference = 2
+
+// Multiplication
+//int product = 5 * 3; // product = 15
+
+// Division
+//int quotient = 5 / 3; // quotient = 1
+
+// Modulus 
+//int remainder = 5 % 3; // remainder = 2
+
+// Increment
+//int count = 5;
+//count++; // count = 6
+
+// Decrement
+//int count = 5;
+//count--; // count = 4

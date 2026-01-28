@@ -8,14 +8,31 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            Console.WriteLine("Enter your name:");
-            //Read user input from console
-            string name =Console.ReadLine();
+            int friendsCount = 5;
 
-            Console.WriteLine("Enter your age:");
-            int age =int.Parse(Console.ReadLine());
+            // Different ways to increment the value of friendsCount by 1
+            friendsCount=friendsCount+1;
+            friendsCount+=1;
+            friendsCount++;
 
-            Console.WriteLine("Hello, " + name.ToUpper() + "! \n You was born in " + (DateTime.Now.Year-age));
+            // Different ways to decrement the value of friendsCount by 1
+            friendsCount=friendsCount-1;
+            friendsCount-=1;
+            friendsCount--;
+
+            // Different ways to double the value of friendsCount
+            friendsCount=friendsCount*2;
+            friendsCount*=2;
+
+            // Different ways to halve the value of friendsCount
+            friendsCount=friendsCount/2;
+            friendsCount /= 2;
+
+            // Different ways to get the remainder when friendsCount is divided by 3
+            friendsCount= friendsCount % 4;
+            friendsCount %= 3;
+
+            Console.WriteLine(friendsCount);
             Console.ReadKey();
         }
     }
