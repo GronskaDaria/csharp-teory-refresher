@@ -16,7 +16,12 @@ namespace MyProject
             Bicycle bicycle = new Bicycle();
             Boat boat = new Boat();
 
-            Vehicle [] race = { car, bicycle, boat };
+            Vehicle [] vehicles = { car, bicycle, boat };
+
+            foreach (Vehicle vehicle in vehicles)
+            {
+                vehicle.Go();
+            }
 
 
             Console.ReadKey();
@@ -26,22 +31,31 @@ namespace MyProject
 
     class Vehicle
     {
+        public virtual void Go() { }
 
     }
 
     class Car : Vehicle
     {
-
+        public override void Go() {
+            Console.WriteLine("The car is going!");
+        }
     }
 
     class Bicycle : Vehicle
     {
-
+        public override void Go()
+        {
+            Console.WriteLine("The bicycle is going!");
+        }
     }
 
     class Boat : Vehicle
     {
-
+        public override void Go()
+        {
+            Console.WriteLine("The boat is going!");
+        }
 
     }
 
