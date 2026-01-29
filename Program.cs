@@ -10,66 +10,40 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
+            //polymorphism -> means to "have many forms"
+
             Car car = new Car();
             Bicycle bicycle = new Bicycle();
             Boat boat = new Boat();
 
-            Console.WriteLine(car.speed);
-            Console.WriteLine(car.wheels);
-            car.go();
+            Vehicle [] race = { car, bicycle, boat };
 
-            Console.WriteLine("\n"+boat.speed);
-            Console.WriteLine(boat.wheels);
-            boat.go();
 
-            Console.WriteLine("\n"+bicycle.speed);
-            Console.WriteLine(bicycle.wheels);
-            bicycle.go();
-           
             Console.ReadKey();
         }
 
     }
 
-    abstract class Vehicle
+    class Vehicle
     {
-        public int speed;
 
-        abstract public void go();
     }
 
-    class Car:Vehicle 
+    class Car : Vehicle
     {
-        public int wheels = 4;
-        int  speed =70;
-        public override void go()
-        {
-            Console.WriteLine("Car is going!");
-            
-        }
+
     }
 
     class Bicycle : Vehicle
     {
-        public int wheels = 2;
-        int speed = 10;
-        public override void go()
-        {
-            Console.WriteLine("Bike is going!");
 
-        }
     }
 
-    class Boat:Vehicle {
+    class Boat : Vehicle
+    {
 
-        public int wheels = 0;
-        int speed = 100;
-        public override void go()
-        {
-            Console.WriteLine("Boat is going!");
 
-        }
     }
 
-    
+
 }
