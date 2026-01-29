@@ -10,51 +10,51 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            //Overloaded constuctors ->  technique to create multiple constructors, 
-            //                            with different set of parameters
+            Car car = new Car();
+            Bicycle bicycle = new Bicycle();
+            Boat boat = new Boat();
 
-            Pizza pizza = new Pizza("stuffed crust", "red", "mozzarella", "salami");
-            Pizza pizza1 = new Pizza("stuffed crust", "red", "mozzarella");
+            Console.WriteLine(car.speed);
+            Console.WriteLine(car.wheels);
+            car.go();
 
+            Console.WriteLine("\n"+boat.speed);
+            Console.WriteLine(boat.wheels);
+            boat.go();
+
+            Console.WriteLine("\n"+bicycle.speed);
+            Console.WriteLine(bicycle.wheels);
+            bicycle.go();
+           
             Console.ReadKey();
         }
 
     }
 
-    class Pizza
+    class Vehicle
     {
-        string bread;
-        string sauce;
-        string cheese;
-        string topping;
+        public int speed;
 
-        public Pizza(string bread, string sauce, string cheese, string topping)
+        public void go ()
         {
-            this.bread=bread;
-            this.sauce=sauce;
-            this.cheese=cheese;
-            this.topping=topping;
-
+            Console.WriteLine("This is vehicle is moving!");
         }
-
-        public Pizza(string bread, string sauce, string cheese)
-        {
-            this.bread=bread;
-            this.sauce=sauce;
-            this.cheese=cheese;
-        }
-
-        public Pizza(string bread, string sauce)
-        {
-            this.bread=bread;
-            this.sauce=sauce;
-        }
-
-        public Pizza(string bread)
-        {
-            this.bread=bread;
-        }
-
-
     }
+
+    class Car:Vehicle 
+    {
+        public int wheels = 4;
+    }
+
+    class Bicycle : Vehicle
+    {
+        public int wheels = 2;
+    }
+
+    class Boat:Vehicle {
+
+        public int wheels = 0;
+    }
+
+    
 }
