@@ -31,29 +31,44 @@ namespace MyProject
 
     }
 
-    class Vehicle
+    abstract class Vehicle
     {
         public int speed;
 
-        public void go ()
-        {
-            Console.WriteLine("This is vehicle is moving!");
-        }
+        abstract public void go();
     }
 
     class Car:Vehicle 
     {
         public int wheels = 4;
+        int  speed =70;
+        public override void go()
+        {
+            Console.WriteLine("Car is going!");
+            
+        }
     }
 
     class Bicycle : Vehicle
     {
         public int wheels = 2;
+        int speed = 10;
+        public override void go()
+        {
+            Console.WriteLine("Bike is going!");
+
+        }
     }
 
     class Boat:Vehicle {
 
         public int wheels = 0;
+        int speed = 100;
+        public override void go()
+        {
+            Console.WriteLine("Boat is going!");
+
+        }
     }
 
     
