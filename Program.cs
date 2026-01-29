@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 
 namespace MyProject
 {
@@ -8,31 +9,30 @@ namespace MyProject
         static void Main(string [] args)
         //Body of the Main method
         {
-            int x;
-            int y;
-            double result;
-            try
+            // multidemesional array
+            //string [] ford = { "Mustang", "F-150", "Explorer" };
+            //string [] chevy = { "Corvette", "Camaro", "Silverado" };
+            //string [] toyota = { "Corolla", "Camry", "Rav4" };
+
+            string [,] parkingLot = {   {"Mustang", "F-150", "Explorer" },
+                                        {"Corvette", "Camaro", "Silverado" },
+                                        {"Corolla", "Camry", "Rav4" }
+                                    };
+
+            parkingLot [0, 2]="Fusion";
+
+            //foreach (string car in parkingLot)
+            //{
+            //    Console.WriteLine(car);
+            //};
+
+            for (int i = 0; i<parkingLot.GetLength(0); i++)
             {
-                Console.WriteLine("Enter first number: ");
-                x=Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter second number: ");
-                y=Convert.ToInt32(Console.ReadLine());
-                result=x/y;
-                Console.WriteLine("Result is "+result);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Enter ONLY numbers.");
-                return;
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("Cannot divide by zero.");
-                return;
-            }
-            finally
-            {
-                Console.WriteLine("Execution completed.");
+                for (int j = 0; j<parkingLot.GetLength(1); j++)
+                {
+                    Console.Write($"{parkingLot [i, j], 12}");
+                }
+                Console.WriteLine();
             }
 
             Console.ReadKey();
